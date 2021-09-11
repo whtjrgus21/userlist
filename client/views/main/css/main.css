@@ -1,0 +1,70 @@
+:root {
+  /* color */
+  --contents-color: #F2DFE6;
+
+  /* Border */
+  --contents-radius: 15px;
+}
+
+.contents {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-areas: 
+    "hello hello calendar"
+    "weather time calendar"
+    "todo todo calendar ";
+  grid-gap: 20px;
+  z-index: -1;
+}
+
+.hello {
+  grid-area: hello;
+  background: var(--contents-color);
+  border-radius: var(--contents-radius);
+  padding: 20px;
+}
+
+.weather {
+  grid-area: weather;
+  background: var(--contents-color);
+  border-radius: var(--contents-radius);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  grid-area: time;
+  background: var(--contents-color);
+  border-radius: var(--contents-radius);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar {
+  grid-area: calendar;
+  background: var(--contents-color);
+  border-radius: var(--contents-radius);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo {
+  grid-area: todo;
+  background: var(--contents-color);
+  border-radius: var(--contents-radius);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

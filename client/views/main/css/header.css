@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  transition: all 0.5s ease;
+}
+
+.header i {
+  font-size: 18px;
+  padding: 30px;
+}
+
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  width: 100%;
+}
+
+/* #menu li {
+  
+} */

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./css/chat.css">
+  
+  <!-- fontawesome cdn -->
+  <link 
+    rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <h1 class="title">chat</h1>
+  <div class="main">
+    <div class="name">
+      <span><i class="fas fa-user"></i></span>
+      <!-- <input 
+        type="text" 
+        id="name-input" 
+        class="name-input" 
+        value="annoymous" 
+        maxlength="20"
+      /> -->
+      <p><%= displayName %></p>
+      
+    </div>
+
+    <ul class="message-container" id="message-container">
+      <!-- <li class="message-left">
+        <p class="message">
+          lorem
+          <span>bluebird blabla</span>
+        </p>
+      </li> -->
+
+      <!-- <li class="message-right">
+        <p class="message">
+          lorem
+          <span>bluebird blabla</span>
+        </p>
+      </li> -->
+
+      <!-- <li class="message-feedback">
+        <p class="feedback" id="feedback">누가 타이핑해여</p>
+      </li> -->
+    </ul>
+
+    <form class="message-form" id="message-form">
+      <input 
+        type="text" 
+        name="message" 
+        id="message-input" 
+        class="message-input" 
+      />
+      <div class="v-divider"></div>
+      <button type="submit" class="send-button">
+        send <span><i class="fab fa-telegram-plane"></i></span>
+      </button>
+    </form>
+  </div>
+  <h3 class="client-total" id="client-total">
+    <!-- Total clients: 2 -->
+  </h3>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- what is this cdn..? -->
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" 
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+  </script>
+  <script src="./js/chat.js"></script>
+</body>
+</html>

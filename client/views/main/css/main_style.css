@@ -1,0 +1,108 @@
+:root {
+  /* 단순히 나눈 것을 구분하기 위해 색깔을 넣었습니다. */
+  /* color */
+  --body-color: #F3F7FA;
+  --sidebar-color: #11101d;
+
+  /* --header-color: #ffffff; */
+  /* --main-color: #F0F2F9; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--body-color);
+}
+
+#sidebar {
+  background: var(--sidebar-color);
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 78px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+}
+
+#bars {
+  padding: 30px;
+  font-size: 20px;
+}
+
+/* .sidebar.active #bars {
+  
+} */
+
+.sidebar.active ~ #container {
+  width: calc(100% - 240px);
+  left: 240px;
+}
+
+/* 미디어 쿼리 적용 */
+@media (max-width: 767px){
+	/* 모바일 */
+  #sidebar {
+    display: none;
+  }
+
+  #container {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  #root.active #sidebar {
+    z-index: 1;
+    display: flex;
+    top: 10%;
+  }
+
+  .sidebar.active ~ #container {
+    width: 100%;
+    left: 0;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* 테블릿 세로 */
+  #sidebar {
+    display: none;
+  }
+
+  #container {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  #root.active #sidebar {
+    z-index: 1;
+    display: flex;
+    top: 10%;
+}
+
+  .sidebar.active ~ #container {
+    width: 100%;
+    left: 0;
+  }
+
+  .nav_list {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* 테블릿 가로 */
+  
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatting</title>
+
+  <!-- bootstrap -->
+  <!-- <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
+    crossorigin="anonymous"
+  />
+
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" 
+    crossorigin="anonymous">
+  </script> -->
+
+  <!-- <script src="bootstrap-popovers.js" defer></script> -->
+
+  <!-- fontawesome / icon -->
+  <link 
+    rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous"
+  />
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/sidebar.css">
+  <link rel="stylesheet" href="./css/main_style.css">
+
+  <!-- js -->
+  <script src="./js/clock.js" defer></script>  
+  <script src="./js/sidebar.js" defer></script>
+</head>
+<body>
+  <div id="root">
+    <!-- sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <!-- <div class="logo_name">로고 이름</div> -->
+        </div>
+      </div>
+
+      <ul class="nav_list" id="nav_list">
+        <li class="side_items" id="">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search..." class="search">
+          <span class="tooltip">Search</span>
+        </li>
+
+        <li class="side_items" id="">
+          <a href="#">
+            <i class="fas fa-home"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+
+        <li class="side_items" id="">
+          <a href="#">
+            <i class="fas fa-user"></i>
+            <span class="links_name">User</span>
+          </a>
+          <span class="tooltip">User</span>
+        </li>
+  
+        <li class="side_items" id="">
+          <a href="#">
+            <i class="fas fa-comments"></i>
+            <span class="links_name">Chat</span>
+          </a>
+          <span class="tooltip">Chat</span>
+        </li>
+
+        <li class="side_items" id="">
+          <a href="#">
+            <i class="far fa-calendar"></i>
+            <span class="links_name">
+              Calendar</span>
+          </a>
+          <span class="tooltip">Calendar</span>
+        </li>
+        
+        <li class="side_items" id="">
+          <a href="#">
+            <i class="fas fa-clipboard-list"></i>
+            <span class="links_name">
+              Lists</span>
+          </a>
+          <span class="tooltip">List</span>
+        </li>
+
+        <li class="side_items" id="">
+          <a href="#">
+            <i class="fas fa-ellipsis-h"></i>
+            <span class="links_name">
+              Additional</span>
+          </a>
+          <span class="tooltip">Additional</span>
+        </li>
+
+        <li class="side_items" id ="">
+          <a href="/auth/logout">
+            <i class="fas fa-door-open"></i>
+            <span class="links_name">
+              Logout</span>
+          </a>
+          <span class="tooltip">logout</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="container" id="container">
+      <!-- header -->
+      <header id="header" class="header">
+        <i class="fas fa-bars bars" id="bars"></i>
+
+        <div class="content">
+          
+        </div>
+
+        <ul id="menu">
+          <li>
+            <i class="far fa-bell"></i>
+          </li>
+          <li>
+            <i class="fas fa-grip-horizontal"></i>
+          </li>
+          <li>
+            <i class="fas fa-cog"></i>
+          </li>
+        </ul>
+      </header>
+
+      <!-- Main -->
+      <main class="contents" id="contents">
+        <div class="hello" id="hello">
+          <h1 class="bow">Hello~</h1>
+          <h2 class="nickname"><%=displayName %></h2>
+        </div>
+        
+        <div class="weather" id="weather">
+          weather
+        </div>
+        
+        <div class="time" id="time">
+          <h2 class="clock" id="clock">00:00:00</h2>
+        </div>
+        
+        <div class="calendar" id="calendar">Calendar</div>
+        
+        <div class="todo" id="todo">TodoList</div>
+      </main>
+
+    <!-- footer -->
+    <!-- <footer>Footer</footer> -->
+    </div>
+  </div>
+
+</body>
+</html>
